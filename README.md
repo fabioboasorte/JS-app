@@ -1,2 +1,2 @@
-# react-app
-App use React
+# js-app
+App use js
