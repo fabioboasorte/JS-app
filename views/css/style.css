@@ -1,0 +1,7 @@
+body {
+  background-color: red;
+  font-weight: 600; }
+  body .wraper {
+    background-color: yellow; }
+    body .wraper.home {
+      color: red; }
