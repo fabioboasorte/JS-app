@@ -4,4 +4,5 @@ body {
   body .wraper {
     background-color: yellow; }
     body .wraper.home {
-      color: red; }
+      color: red;
+      text-tranform: uppercase; }

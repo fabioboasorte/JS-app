@@ -14,6 +14,24 @@ export default (() => {
                         } else {
                             return JSON.stringify(body);
                         }
+                    },
+
+                    'text/css': function formatCSS(req, res, body) {
+                        if (typeof (body) === 'string')
+                            return body;
+
+                        return '';
+                    },
+
+                    'text/javascript': function format(req, res, body) {
+                        if (typeof (body) === 'string')
+                            return body;
+
+                        return '';
+                    },
+
+                    'image/png': function formatPNG(req, res, body) {
+                        return body;
                     }
                 }
             };
@@ -22,6 +40,9 @@ export default (() => {
         $init() {
             //console.log($Libs, $Libs.$restify);
             const restify = $Libs.$restify;
+            const connect = $Libs.$connect;
+            const serveStatic = $Libs.$serveStatic;
+            
             const restifyServer = restify.createServer($Server.$options());
             //const restifyServer = restify.createServer();
             const cors = $Libs.$restifyCors({
